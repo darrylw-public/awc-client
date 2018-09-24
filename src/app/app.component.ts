@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'awc-client';
+  model: any = {};
+
+  title = 'Acme Widget Company - Employee Activity Squad';
 }
