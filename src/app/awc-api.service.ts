@@ -20,14 +20,32 @@ export class AwcApiService {
   }
 
   registerUser(user: User) {
-    let headers: HttpHeaders = new HttpHeaders();
-    headers = headers.append('Accept', 'application/json');
-    this.http.post(this.host, user, { headers });
+    // let headers: HttpHeaders = new HttpHeaders();
+    // headers = headers.append('Accept', 'application/json');
+    // this.http.post(this.host, user, { headers });
+    alert('REGISTERED!');
+    console.log(user);
   }
 
   getAttendees() {
-    let headers: HttpHeaders = new HttpHeaders();
-    headers = headers.append('Accept', 'application/json');
-    return this.http.get(this.host, { headers }).subscribe(response => [ response ]);
+    // let headers: HttpHeaders = new HttpHeaders();
+    // headers = headers.append('Accept', 'application/json');
+    // return this.http.get(this.host, { headers }).subscribe(response => [ response ]);
+    return [
+      {
+        firstName: "Dave",
+        lastName: "Thomas",
+        email: "dt@wendys.com",
+        activity: "Baseball",
+        comments: "none, but thank you."
+      },
+      {
+        firstName: "Wendy",
+        lastName: "Thomas",
+        email: "wt@wendys.com",
+        activity: "Football",
+        comments: ""
+      }
+    ];
   }
 }
