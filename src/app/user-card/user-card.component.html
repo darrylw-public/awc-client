@@ -1,0 +1,7 @@
+<div class="container jumbotron">
+  <div class="row">
+    <strong>{{user.firstName}} {{user.lastName}} <small>{{user.email}}</small></strong>
+  </div>
+  <div class="row">{{user.activity}}</div>
+  <p class="comments" *ngIf="user.comments">> {{user.comments}}</p>
+</div>

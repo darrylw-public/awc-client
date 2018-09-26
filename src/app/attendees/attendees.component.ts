@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AwcApiService } from '../awc-api.service';
 
 @Component({
   selector: 'app-attendees',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AttendeesComponent implements OnInit {
 
-  constructor() { }
+  attendees: any = [];
+
+  constructor(private svc: AwcApiService) { }
 
   ngOnInit() {
+    this.attendees = this.svc.getAttendees();
   }
 
 }

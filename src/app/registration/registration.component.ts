@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { User } from '../user.model';
 
 @Component({
   selector: 'app-registration',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  model: Model;
-  constructor() { }
+
+  @Input() user: User;
+  registered: User;
+  activities: any;
+  
+  constructor() {
+    this.activities = [
+      { name: "Baseball" },
+      { name: "Basketball" },
+      { name: "Ultimate Frisbee" }
+    ];
+  }
 
   ngOnInit() {
+    this.registered = this.user;
   }
 
   onSubmit(event) {

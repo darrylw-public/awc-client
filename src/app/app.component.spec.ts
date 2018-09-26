@@ -13,15 +13,15 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
-  it(`should have as title 'awc-client'`, async(() => {
+  it(`should have as title 'AwcClient'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('awc-client');
+    expect(app.title).toEqual('AwcClient');
   }));
   it('should render title in a h1 tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to awc-client!');
+    expect(compiled.querySelector('h1').textContent).toContain('Acme Widget Company - Employee Activity Squad');
   }));
 });
